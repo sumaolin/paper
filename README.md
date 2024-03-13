@@ -2,6 +2,10 @@
 
 <p align="center">🎨 paper 是一个简洁，没有过多冗余视觉元素和功能的 hexo 主题，其设计风格的灵感来源于📰 <strong>报纸</strong>等纸质读物。而且主题以一种💡<strong>极其巧妙</strong>的方式实现了当下(2019)流行的🌗<strong>Dark Mode</strong>，一键可开启。</p>
 
+<p align='center'>
+<a href="https://www.figma.com/community/file/1182981536621476511">Figma设计稿</a>
+</p>
+
 ![landing](https://source-hosting.oss-cn-shanghai.aliyuncs.com/Paper-showcase.png)
 
 <p align='center'>
@@ -11,8 +15,8 @@
 ## 目录
 
 - [如何使用](#如何使用)
-  - [安装](#安装)
-  - [配置项](#配置项)
+    - [安装](#安装)
+    - [配置项](#配置项)
 - [效果预览](#效果预览)
 - [update](#update)
 - [移植版](#移植版)
@@ -144,15 +148,23 @@ social:
 - 评论模块配置
 
 ```bash
-# commend module
+# comment module
 comment:
-  enable: false # true to enable
+  enable: false
+  type: valine # valine | utterances
+
+  # valine 需要的参数
   appId: your-app-id
   appKey: your-app-key
   placeholder: say something
   notify: false
   verify: false
   avatar: mp
+
+  # utterances (https://utteranc.es/) 需要的参数
+  repo: your-repo-name
+  issue_term: your-issue-term
+  theme: your-comment-theme
 ```
 
 - 开启数学公式
